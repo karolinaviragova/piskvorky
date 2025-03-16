@@ -1,0 +1,69 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(#615dad, #ffc8da);
+}
+
+.card__container {
+  display: flex;
+  justify-content: center;
+}
+
+.card__item {
+  display: flex;
+  flex-direction: column;
+  background-color: #283e50;
+  align-items: center;
+  width: 40%;
+}
+
+.card__image {
+  width: 100%;
+}
+
+.card__heading {
+  font-family: "Lobster";
+  color: #ffffff;
+  padding: 15px;
+}
+
+.card__description {
+  color: #ffffff;
+  text-align: center;
+  padding: 0 15px 15px 15px;
+}
+
+.card__btn {
+  color: white;
+  background-color: #1fcca4;
+  cursor: pointer;
+  height: 3rem;
+  border: none;
+  width: 100%;
+}
+
+.card__btn:hover {
+  background-color: #1cbb96;
+}
+
+.card__btn--play {
+  background-color: #0197f6;
+}
+
+.card__btn--play:hover {
+  background-color: #0090e9;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
