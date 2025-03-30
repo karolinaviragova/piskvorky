@@ -33,10 +33,12 @@ body {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.card__heading {
+.card__heading,
+.game__heading {
   font-family: "Lobster";
   color: #ffffff;
   padding: 1rem;
+  text-align: center;
 }
 
 .card__description {
@@ -72,6 +74,43 @@ a:visited {
   color: white;
   text-decoration: none;
 }
+
+.game__btn {
+  width: calc(8vmin);
+  height: calc(8vmin);
+  border: 1px solid black;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.game__btn:hover,
+.game__btn:focus {
+  opacity: 0.7;
+}
+
+.game__container {
+  display: flex;
+  justify-content: center;
+}
+
+.game__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.game__player p {
+  color: white;
+}
+
+.game__field {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 80vmin;
+}
+
 
 
 
