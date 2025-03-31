@@ -75,6 +75,44 @@ a:visited {
   text-decoration: none;
 }
 
+.game__container {
+  display: flex;
+  justify-content: center;
+}
+
+.game__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.game__player {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.game__circle {
+  height: 14px;
+  width: 14px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.game__player p {
+  color: white;
+  margin-right: 5px;
+}
+
+.game__field {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 80vmin;
+}
+
 .game__btn {
   width: calc(8vmin);
   height: calc(8vmin);
@@ -88,29 +126,28 @@ a:visited {
   opacity: 0.7;
 }
 
-.game__container {
-  display: flex;
-  justify-content: center;
+.game__icons img {
+position: relative;
+top: 7px;
+left: 8px;
 }
 
-.game__nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 10px;
+.game__icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #1fcca4;
+  border-radius: 10%;
 }
 
-.game__player p {
-  color: white;
+.game__icon:hover {
+  background-color: #1cbb96;
 }
 
-.game__field {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 80vmin;
+.game__icon--restart {
+  background-color: #0197f6;
 }
 
-
-
-
+.game__icon--restart:hover {
+  background-color: #0090e9;
+}
