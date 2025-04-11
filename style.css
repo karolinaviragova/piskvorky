@@ -9,6 +9,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .card__container {
@@ -54,6 +55,7 @@ body {
   height: 3rem;
   border: none;
   width: 100%;
+  font-size: 15px;
 }
 
 .card__btn:hover {
@@ -93,12 +95,9 @@ a:visited {
   align-items: center;
 }
 
-.game__circle {
-  height: 14px;
-  width: 14px;
-  border: 2px solid white;
-  border-radius: 50%;
-  display: inline-block;
+.game__cross {
+  background-image: url(icons/cross.svg);
+  background-size: cover;
 }
 
 .game__player p {
@@ -151,3 +150,14 @@ left: 8px;
 .game__icon--restart:hover {
   background-color: #0090e9;
 }
+
+.board__field--circle {
+  background-image: url(icons/circle-black.svg);
+  background-size: cover;
+}
+
+.board__field--cross{
+  background-image: url(icons/cross-black.svg);
+  background-size: cover;
+}
+
