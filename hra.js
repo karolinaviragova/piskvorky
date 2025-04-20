@@ -3,10 +3,10 @@ const circleIcon = document.querySelector(".circle__icon");
 
 const tvojeFunkce = (event) => {
   event.target.disabled = true
-  
+
   if (currentPlayer === "circle") {
-    circleIcon.innerHTML = `<img src="icons/cross.svg" alt="white cross" class="cross">`
      event.target.classList.add("board__field--circle")
+     circleIcon.innerHTML = `<img src="icons/cross.svg" alt="white cross" class="cross">`
      currentPlayer = "cross"
    } else if (currentPlayer === "cross") {
      event.target.classList.add("board__field--cross")
