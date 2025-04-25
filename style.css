@@ -116,7 +116,7 @@ a:visited {
   width: calc(8vmin);
   height: calc(8vmin);
   border: 1px solid black;
-  opacity: 0.5;
+  background-color:#e6d1d1;
   cursor: pointer;
 }
 
@@ -153,11 +153,15 @@ left: 8px;
 
 .board__field--circle {
   background-image: url(icons/circle-black.svg);
-  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
 }
 
 .board__field--cross{
   background-image: url(icons/cross-black.svg);
-  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
 }
 
