@@ -1,3 +1,5 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4'
+
 let currentPlayer = 'circle';
 const circleIcon = document.querySelector(".circle__icon");
 
@@ -13,6 +15,36 @@ const gameField = (event) => {
      circleIcon.innerHTML = `<img src="icons/circle.svg" alt="white circle" class="circle">`
      currentPlayer = "circle"
    }
+
+   const fields = document.querySelectorAll(".game__btn");
+   const gameArray = Array.from(fields).map((field) => {
+    if (field.classList.contains("board__field--circle")) {
+      return "o"
+    }
+    if (field.classList.contains("board__field--cross")) {
+      return "x"
+    }
+    return "_"
+})
+
+  const winner = findWinner(gameArray);
+
+  if (winner === "o") {
+    setTimeout(() => {
+    window.alert("Winner is O")
+    location.reload()
+    }, "0500")
+  } else if (winner === "x") {
+    setTimeout(() => {
+    window.alert("Winner is X")
+    location.reload()
+    }, "0500")
+  } else if (winner === "tie") {
+    setTimeout(() => {
+    window.alert("This is a tie!")
+    location.reload()
+    }, "0500")
+  }
 }
 
 const allButtons = document.querySelectorAll(".game__field");
@@ -28,3 +60,7 @@ iconrestart.addEventListener("click", (event) => {
     event.preventDefault()
   }
 })
+
+
+
+
