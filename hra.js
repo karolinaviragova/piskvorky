@@ -33,21 +33,21 @@ const gameField = (event) => {
     setTimeout(() => {
     window.alert("Winner is O")
     location.reload()
-    }, "0500")
+    }, 500)
   } else if (winner === "x") {
     setTimeout(() => {
     window.alert("Winner is X")
     location.reload()
-    }, "0500")
+    }, 500)
   } else if (winner === "tie") {
     setTimeout(() => {
     window.alert("This is a tie!")
     location.reload()
-    }, "0500")
+    }, 500)
   }
 }
 
-const allButtons = document.querySelectorAll(".game__field");
+const allButtons = document.querySelectorAll(".game__btn");
 allButtons.forEach((button) => {
   button.addEventListener("click", gameField)
 })
