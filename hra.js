@@ -3,7 +3,7 @@ import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4'
 let currentPlayer = 'circle';
 const circleIcon = document.querySelector(".circle__icon");
 
-const gameField = (event) => {
+const gameField = async (event) => {
   event.target.disabled = true
 
   if (currentPlayer === "circle") {
@@ -25,8 +25,7 @@ const gameField = (event) => {
       return "x"
     }
     return "_"
-})
-
+  })
   const winner = findWinner(gameArray);
 
   if (winner === "o") {
@@ -45,6 +44,32 @@ const gameField = (event) => {
     location.reload()
     }, 500)
   }
+
+  if (winner !== "x" && winner !== "o" && winner !== "tie") {
+    if (currentPlayer === "cross") {
+      const response = await fetch("https://piskvorky.czechitas-podklady.cz/api/suggest-next-move", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          board: gameArray,
+          player: "x",
+        }),
+      });
+      const data = await response.json();
+      const { x, y } = data.position;
+      
+      // Převod souřadnic (x, y) na index pro 10x10 mřížku
+      const index = x + y * 10; // Vzorec pro 10x10 mřížku
+
+      // Simulace kliknutí na políčko na základě indexu
+      const button = fields[index];
+      if (button) {
+        button.click();
+      }
+    }
+  }
 }
 
 const allButtons = document.querySelectorAll(".game__btn");
@@ -60,6 +85,8 @@ iconrestart.addEventListener("click", (event) => {
     event.preventDefault()
   }
 })
+
+
 
 
 
