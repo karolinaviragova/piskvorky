@@ -25,7 +25,7 @@ body {
   display: flex;
   flex-direction: column;  
   align-items: center;
-  max-width: 30%;
+  max-width: 80%;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
@@ -166,3 +166,16 @@ left: 8px;
   background-size: 70%;
 }
 
+/* Pro tablety (min šířka 768px) */
+@media (min-width: 768px) {
+  .card__item {
+    max-width: 50%;
+  }
+}
+
+/* Pro desktop (min šířka 1024px) */
+@media (min-width: 1024px) {
+  .card__item {
+    max-width: 30%;
+  }
+}
